@@ -1,0 +1,54 @@
+body, html, p {
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    background-color: #b91337;
+    color: white;
+    width: 160px;
+    padding: 10px;
+    margin: 150px;
+    border-radius: 10px;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: 55px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.tooltip-title {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: start;
+    background: rgb(234, 232, 232);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tooltip-content {
+    font-size: 12px;
+    background: white;
+    text-align: start;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
