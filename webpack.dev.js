@@ -3,20 +3,20 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
-    // Set the mode to development or production
+    // Устанавливаем режим разработки
     mode: 'development',
-    // Control how source maps are generated
+    // Контролируем, как создаются карты исходного кода
     devtool: 'inline-source-map',
 
-    // Spin up a server for quick development
+    // Настройки dev-сервера
     devServer: {
         historyApiFallback: true,
         open: true,
         compress: true,
+        port: 9000,  // Добавляем порт, если требуется
     },
-
     plugins: [
-    // Only update what has changed on hot reload
+        // Включаем горячую замену модулей
         new webpack.HotModuleReplacementPlugin(),
     ],
 });
